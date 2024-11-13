@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        .timeline div {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        .timeline .circle {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #333;
+            border-radius: 50%;
+            margin-top: 8px;
+        }
+        .car-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .car-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .car-info .details,
+        .car-info .gallery {
+            width: 48%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .details-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .gallery .thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .thumbnails img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .details-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .details-section .box {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+            color: #333;
+        }
+        .box-icon {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+.category-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.category-selector button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.category-selector button:hover {
+    background-color: #555;
+}
+.nazva{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    background-color: #333;
+    color: white;
+    height: 50px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+                margin: auto;
+                align-items: center;
+            }
+            .category-selector{
+                flex-direction: column;
+                margin: auto;
+                align-items: center;
+            }
+            .car-info {
+                flex-direction: column-reverse;
+            }
+            .car-info .details,
+            .car-info .gallery {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .details-section .box {
+                width: 100%;
+                font-size: 14px;
+            }
+            .category-selector button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            .carousel-button {
+                font-size: 22px;
+                padding: 12px;
+            }
+            .car-title {
+                font-size: 20px;
+            }
+            .category-selector{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+            .category-selector button{
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Timeline -->
+     <div class="nazva">
+        <h1>Urban Auto</h1>
+     </div>
+    <div class="timeline">
+        <div>
+            <div class="circle"></div>
+            Auction<br>10.10.2024
+        </div>
+        <div>
+            <div class="circle"></div>
+            Picked Up<br>16.10.2024
+        </div>
+        <div>
+            <div class="circle"></div>
+            Warehouse<br>18.10.2024
+        </div>
+        <div>
+            <div class="circle"></div>
+            Loaded<br>00.00.2024
+        </div>
+        <div>
+            <div class="circle"></div>
+            In Transit<br>00.00.2024
+        </div>
+        <div>
+            <div class="circle"></div>
+            Unloaded<br>00.00.2024
+        </div>
+    </div>
+
+    <!-- Title -->
+    <div class="car-title">2021 Tesla Model Y</div>
+    <div class="category-selector">
+        <button onclick="showCategory('auction')">Auction</button>
+        <button onclick="showCategory('picked_up')">Picked Up</button>
+        <button onclick="showCategory('warehouse')">Warehouse</button>
+        <button onclick="showCategory('port_of_discharge')">Port of Discharge</button>
+    </div>
+
+    <!-- Car Info -->
+    <div class="car-info">
+        <!-- Details Section -->
+        <div class="details">
+            <h1>Auction</h1>
+            <div class="details-item">
+                <span>VIN:</span>
+                <span>5YJYGAEE4MF285995</span>
+            </div>
+            <div class="details-item">
+                <span>Lot ID:</span>
+                <span>39946223</span>
+            </div>
+            <div class="details-item">
+                <span>Keys:</span>
+                <span>YES</span>
+            </div>
+            <div class="details-item">
+                <span>Documents:</span>
+                <span>YES</span>
+            </div>
+            <div class="details-item">
+                <span>Purchase Date:</span>
+                <span>10.10.2024</span>
+            </div>
+            <div class="details-item">
+                <span>Warehouse Delivery:</span>
+                <span>16.06.2024</span>
+            </div>
+            <div class="details-item">
+                <span>Container:</span>
+                <span>0</span>
+            </div>
+            <div class="details-item">
+                <span>Port of Loading:</span>
+                <span>Houston TX</span>
+            </div>
+            <div class="details-item">
+                <span>Port of Discharge:</span>
+                <span>Klaipeda</span>
+            </div>
+            <div class="details-item">
+                <span>ETA:</span>
+                <span>00.00.2024</span>
+            </div>
+        </div>
+
+        <!-- Gallery Section
+            <div class="carousel-container">
+            <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-images" id="carousel-images">
+                <img src="tesla auction/5YJYGAEE4MF285995-1.jpg" alt="Car Image 1">
+                <img src="tesla auction/5YJYGAEE4MF285995-2.jpg" alt="Car Image 2">
+                <img src="tesla auction/5YJYGAEE4MF285995-3.jpg" alt="Car Image 3">
+                <img src="tesla auction/5YJYGAEE4MF285995-4.jpg" alt="Car Image 4">
+                <img src="tesla auction/5YJYGAEE4MF285995-5.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-6.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-7.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-8.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-9.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-10.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-11.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-12.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-13.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-14.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-15.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-16.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-17.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-18.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-19.jpg" alt="Car Image 5">
+                <img src="tesla auction/5YJYGAEE4MF285995-20.jpg" alt="Car Image 5">
+            </div>
+            <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
+        </div> -->
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
+           <div class="carousel-images" id="carousel-images">
+                <!-- Images for each category, initially set to the 'auction' category -->
+                <img src="tesla auction/5YJYGAEE4MF285995-1.jpg" alt="Car Image 1" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-2.jpg" alt="Car Image 2" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-3.jpg" alt="Car Image 3" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-4.jpg" alt="Car Image 4" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-5.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-6.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-7.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-8.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-9.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-10.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-11.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-12.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-13.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-14.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-15.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-16.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-17.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-18.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-19.jpg" alt="Car Image 5" data-category="auction">
+                <img src="tesla auction/5YJYGAEE4MF285995-20.jpg" alt="Car Image 5" data-category="auction">
+                <img src="deliver/No_image_available.svg.png" alt="Picked Up Image 1" data-category="picked_up" style="display: none;">
+                <img src="tesla warehouse/1.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/2.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/3.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/4.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/5.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/6.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/7.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/8.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/9.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/10.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/11.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/12.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/13.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/14.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/15.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/16.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/17.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/18.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/19.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/20.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/21.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/22.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/23.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="tesla warehouse/24.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
+                <img src="port /No_image_available.svg (1).png" alt="Port of Discharge Image 1" data-category="port_of_discharge" style="display: none;">
+            </div>
+            <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Additional Details -->
+    <div class="details-section">
+        <div class="box">
+            <div class="box-icon">📄</div>
+            <div>Documents: TX-CLEAN Title</div>
+        </div>
+        <div class="box">
+            <div class="box-icon">📏</div>
+            <div>Odometer: 40974 (Actual)</div>
+        </div>
+        <div class="box">
+            <div class="box-icon">🔑</div>
+            <div>Keys Auction: Yes</div>
+        </div>
+        <div class="box">
+            <div class="box-icon">⚙️</div>
+            <div>Engine: Dual Motor Long Range</div>
+        </div>
+        <div class="box">
+            <div class="box-icon">⛽</div>
+            <div>Fuel: Electrik</div>
+        </div>
+        <div class="box">
+            <div class="box-icon">🔧</div>
+            <div>Damage: Front Side</div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const visibleImages = Array.from(document.querySelectorAll('#carousel-images img'))
+            .filter(img => img.style.display !== 'none');
+        const totalImages = visibleImages.length;
+        if (index >= totalImages) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = totalImages - 1;
+        } else {
+            currentIndex = index;
+        }
+        const offset = currentIndex * 100;
+        document.getElementById('carousel-images').style.transform = `translateX(-${offset}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    function showCategory(category) {
+        const images = document.querySelectorAll('#carousel-images img');
+        images.forEach(img => {
+            if (img.getAttribute('data-category') === category) {
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+            }
+        });
+        currentIndex = 0;
+        showSlide(currentIndex);
+    }
+
+    // Always show the navigation buttons, regardless of images
+    const buttons = document.querySelectorAll('.carousel-button');
+    buttons.forEach(button => {
+        button.style.display = 'block'; // Ensure buttons are always visible
+    });
+
+    // Ensure the carousel buttons work
+    document.querySelector('.carousel-button.right').addEventListener('click', nextSlide);
+    document.querySelector('.carousel-button.left').addEventListener('click', prevSlide);
+    
+    // Attach functions to global scope if needed for inline event handling
+    window.showCategory = showCategory;
+    window.nextSlide = nextSlide;
+    window.prevSlide = prevSlide;
+});
+</script>
+
+</body>
+</html>
