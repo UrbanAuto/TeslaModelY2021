@@ -1,478 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesla Model Y 2021</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2021 Tesla Model Y, Long Range Dual Motor All-Wheel Drive</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: black;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .button-link:hover {
+        background-color: grey;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: #f2f2f2;
+        flex-direction: column;
+      }
+
+      .carousel-container {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        max-height: 600px;
+        overflow: hidden;
+        background: #f2f2f2;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* margin-top: 20px; */
+      }
+
+      .carousel-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-item {
+        flex: 0 0 100%;
+        height: 100%;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5em;
+        z-index: 10;
+      }
+
+      .button.left {
+        left: 10px;
+      }
+
+      .button.right {
+        right: 10px;
+      }
+
+      .button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .location-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .location-buttons button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .location-buttons button:hover {
+        background-color: #444;
+      }
+
+      @media (max-width: 600px) {
+        .location-buttons {
+          gap: 5px;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
+
+        .location-buttons button {
+          flex: 1 1 45%;
+          max-width: 45%;
+        }
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .timeline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 0;
+        width: 80%;
+        gap: 10px;
+      }
+      @media (max-width: 600px) {
+        .timeline {
+          gap: 5px;
+        }
+
+        .timeline div {
+          flex: 1 1 45%;
+          max-width: 45%;
+        }
+      }
+      .timeline div {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+      }
+      .timeline .circle {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: #333;
+        border-radius: 50%;
+        margin-top: 8px;
+      }
+      .car-title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px;
+      }
+      .car-info {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      .car-info .details,
+      .car-info .gallery {
+        width: 50%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .details-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        font-size: 14px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .gallery .thumbnails {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .thumbnails img {
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .details-section {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .details-section .box {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+        color: #333;
+      }
+      .box-icon {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 5px;
+      }
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .carousel-images {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-images img {
+        width: 100%;
+        min-height: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+      }
+
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .carousel-button.left {
+        left: 10px;
+      }
+
+      .carousel-button.right {
+        right: 10px;
+      }
+      .category-selector {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .category-selector button {
+        margin: 0 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+        border: none;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .category-selector button:hover {
+        background-color: #555;
+      }
+      .nazva {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        background-color: #333;
+        color: white;
+        height: 50px;
+        width: 100%;
+      }
+      .header {
+        display: flex;
+        margin-top: 20%;
+        background-color: #000000;
+      }
+      @media (max-width: 768px) {
+        .car-title {
+          margin: 20px;
         }
         .timeline {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 0;
+          flex-direction: column;
+          margin: auto;
+          align-items: center;
         }
-        .timeline div {
-            text-align: center;
-            font-size: 14px;
-            color: #555;
-        }
-        .timeline .circle {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background-color: #333;
-            border-radius: 50%;
-            margin-top: 8px;
-        }
-        .car-title {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin: 20px;
+        .category-selector {
+          flex-direction: column;
+          margin: auto;
+          align-items: center;
         }
         .car-info {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
+          flex-direction: column-reverse;
         }
         .car-info .details,
         .car-info .gallery {
-            width: 48%;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .details-item {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
-            font-size: 14px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .gallery .thumbnails {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .thumbnails img {
-            width: 70px;
-            height: 70px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .details-section {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+          width: 100%;
+          margin-bottom: 20px;
         }
         .details-section .box {
-            flex: 1;
-            min-width: 120px;
-            text-align: center;
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            font-size: 12px;
-            color: #333;
+          width: 100%;
+          font-size: 14px;
         }
-        .box-icon {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 5px;
+        .category-selector button {
+          padding: 10px 20px;
+          font-size: 16px;
         }
-        .carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.carousel-button.left {
-    left: 10px;
-}
-
-.carousel-button.right {
-    right: 10px;
-}
-.category-selector {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.category-selector button {
-    margin: 0 10px;
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.category-selector button:hover {
-    background-color: #555;
-}
-.nazva{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100px; 
-    background-color: #333;
-    color: white;
-    height: 50px;
-    width: 100%;
-}
-@media (max-width: 768px) {
-    .car-title{
-        margin: 20px;
-    }
-            .timeline {
-                flex-direction: column;
-                margin: auto;
-                align-items: center;
-            }
-            .category-selector{
-                flex-direction: column;
-                margin: auto;
-                align-items: center;
-            }
-            .car-info {
-                flex-direction: column-reverse;
-            }
-            .car-info .details,
-            .car-info .gallery {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            .details-section .box {
-                width: 100%;
-                font-size: 14px;
-            }
-            .category-selector button {
-                padding: 10px 20px;
-                font-size: 16px;
-            }
-            .carousel-button {
-                font-size: 22px;
-                padding: 12px;
-            }
-            .car-title {
-                font-size: 20px;
-            }
-            .category-selector{
-                display: flex;
-                align-items: center;
-                text-align: center;
-                flex-direction: column;
-            }
-            .category-selector button{
-                margin: 10px;
-            }
+        .carousel-button {
+          font-size: 22px;
+          padding: 12px;
         }
+        .car-title {
+          font-size: 20px;
+        }
+        .category-selector {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+        }
+        .category-selector button {
+          margin: 10px;
+        }
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
-    <!-- Timeline 
- <!--  <div class="nazva">
-        <h1>Urban Auto</h1>
-     </div>-->
+  </head>
+  <body>
+    <div class="nazva">
+      <h1>Urban Auto</h1>
+    </div>
     <div class="timeline">
-        <div>
-            <div class="circle"></div>
-            Auction<br>10.10.2024
-        </div>
-        <div>
-            <div class="circle"></div>
-            Picked Up<br>16.10.2024
-        </div>
-        <div>
-            <div class="circle"></div>
-            Warehouse<br>18.10.2024
-        </div>
-        <div>
-            <div class="circle"></div>
-            Loaded<br>Waiting
-        </div>
-        <div>
-            <div class="circle"></div>
-            In Transit<br>00.00.2024
-        </div>
-        <div>
-            <div class="circle"></div>
-            Unloaded<br>00.00.2024
-        </div>
+      <div>
+        <div class="circle"></div>
+        Auction<br />10.10.2024
+      </div>
+      <div>
+        <div class="circle"></div>
+        Picked Up<br />16.11.2024
+      </div>
+      <div>
+        <div class="circle"></div>
+        Warehouse<br />18.11.2024
+      </div>
+      <div>
+        <div class="circle"></div>
+        Loaded<br />23.11.2024
+      </div>
+      <div>
+        <div class="circle"></div>
+        In Transit<br />30.11.2024
+      </div>
+      <div>
+        <div class="circle"></div>
+        Unloaded<br />00.00.2024
+      </div>
     </div>
 
     <!-- Title -->
-    <div class="car-title">2021 Tesla Model Y</div>
-    <div class="category-selector">
-        <button onclick="showCategory('auction')">Auction</button>
-        <button onclick="showCategory('picked_up')">Picked Up</button>
-        <button onclick="showCategory('warehouse')">Warehouse</button>
-        <button onclick="showCategory('port_of_discharge')">Port of Discharge</button>
+    <div class="car-title">
+      2021 Tesla Model Y Long Range Dual Motor All-Wheel Drive
+    </div>
+    <div class="location-buttons">
+      <button onclick="changeLocation('auction')">Auction</button>
+      <button onclick="changeLocation('picked_up')">Picked Up</button>
+      <button onclick="changeLocation('warehouse')">Warehouse</button>
+      <button onclick="changeLocation('port')">Port</button>
     </div>
 
     <!-- Car Info -->
     <div class="car-info">
-        <!-- Details Section -->
-        <div class="details">
-            <h1>Auction</h1>
-            <div class="details-item">
-                <span>VIN:</span>
-                <span>5YJYGAEE4MF285995</span>
-            </div>
-            <div class="details-item">
-                <span>Lot ID:</span>
-                <span>39946223</span>
-            </div>
-            <div class="details-item">
-                <span>Keys:</span>
-                <span>YES</span>
-            </div>
-            <div class="details-item">
-                <span>Documents:</span>
-                <span>YES</span>
-            </div>
-            <div class="details-item">
-                <span>Purchase Date:</span>
-                <span>10.10.2024</span>
-            </div>
-            <div class="details-item">
-                <span>Warehouse Delivery:</span>
-                <span>18.10.2024</span>
-            </div>
-            <div class="details-item">
-                <span>Container:</span>
-                <span>MSDU8316910</span>
-            </div>
-            <div class="details-item">
-                <span>Port of Loading:</span>
-                <span>Houston TX</span>
-            </div>
-            <div class="details-item">
-                <span>Port of Discharge:</span>
-                <span>Klaipeda</span>
-            </div>
-            <div class="details-item">
-                <span>ETA:</span>
-                <span>21.12.2024</span>
-            </div>
+      <div class="details">
+        <h1>Auction</h1>
+        <div class="details-item">
+          <span>VIN:</span>
+          <span>5YJYGAEE4MF285995</span>
         </div>
+        <div class="details-item">
+          <span>Lot ID:</span>
+          <span>39946223</span>
+        </div>
+        <div class="details-item">
+          <span>Keys:</span>
+          <span>YES</span>
+        </div>
+        <div class="details-item">
+          <span>Documents:</span>
+          <span>Yes</span>
+        </div>
+        <div class="details-item">
+          <span>Purchase Date:</span>
+          <span>10.10.2024</span>
+        </div>
+        <div class="details-item">
+          <span>Warehouse Delivery:</span>
+          <span>18.11.2024</span>
+        </div>
+        <div class="details-item">
+          <span>Container:</span>
+          <span><a class="button-link" href="https://sirius.searates.com/tracking?container=MSDU8316910&sealine=auto">MSDU8316910</a></span>
+        </div>
+        <div class="details-item">
+          <span>Port of Loading:</span>
+          <span>Houston, TX</span>
+        </div>
+        <div class="details-item">
+          <span>Port of Discharge:</span>
+          <span>Klaipeda</span>
+        </div>
+        <div class="details-item">
+          <span>ETA:</span>
+          <span>26.12.2024</span>
+        </div>
+      </div>
 
-        <!-- Gallery Section
-            <div class="carousel-container">
-            <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
-            <div class="carousel-images" id="carousel-images">
-                <img src="tesla auction/5YJYGAEE4MF285995-1.jpg" alt="Car Image 1">
-                <img src="tesla auction/5YJYGAEE4MF285995-2.jpg" alt="Car Image 2">
-                <img src="tesla auction/5YJYGAEE4MF285995-3.jpg" alt="Car Image 3">
-                <img src="tesla auction/5YJYGAEE4MF285995-4.jpg" alt="Car Image 4">
-                <img src="tesla auction/5YJYGAEE4MF285995-5.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-6.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-7.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-8.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-9.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-10.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-11.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-12.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-13.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-14.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-15.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-16.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-17.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-18.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-19.jpg" alt="Car Image 5">
-                <img src="tesla auction/5YJYGAEE4MF285995-20.jpg" alt="Car Image 5">
-            </div>
-            <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
-        </div> -->
-        <div class="carousel-container">
-           <div class="carousel-images" id="carousel-images">
-                <!-- Images for each category, initially set to the 'auction' category -->
-                <img src="tesla auction/5YJYGAEE4MF285995-1.jpg" alt="Car Image 1" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-2.jpg" alt="Car Image 2" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-3.jpg" alt="Car Image 3" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-4.jpg" alt="Car Image 4" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-5.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-6.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-7.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-8.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-9.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-10.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-11.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-12.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-13.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-14.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-15.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-16.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-17.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-18.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-19.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-20.jpg" alt="Car Image 5" data-category="auction">
-                <img src="tesla auction/5YJYGAEE4MF285995-25.jpg" alt="Car Image 5" data-category="auction">
-                <img src="deliver/1.jpg" alt="Picked Up Image 1" data-category="picked_up" style="display: none;">
-                <img src="deliver/2.jpg" alt="Picked Up Image 1" data-category="picked_up" style="display: none;">
-                <img src="deliver/3.jpg" alt="Picked Up Image 1" data-category="picked_up" style="display: none;">
-                <img src="tesla warehouse/1.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/2.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/3.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/4.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/5.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/6.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/7.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/8.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/9.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/10.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/11.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/12.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/13.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/14.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/15.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/16.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/17.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/18.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/19.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/20.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/21.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/22.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/23.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="tesla warehouse/24.jpg" alt="Warehouse Image 1" data-category="warehouse" style="display: none;">
-                <img src="port/No_image_available.svg (1).png" alt="Port of Discharge Image 1" data-category="port_of_discharge" style="display: none;">
-            </div>
-            <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
-        </div>
+      <div class="carousel-container">
+        <div class="carousel-inner" id="carousel-inner"></div>
+        <button class="button left" id="prev">&#8249;</button>
+        <button class="button right" id="next">&#8250;</button>
+      </div>
     </div>
-
-    <!-- Additional Details -->
     <div class="details-section">
-        <div class="box">
-            <div class="box-icon">📄</div>
-            <div>Documents: TX-CLEAN Title</div>
-        </div>
-        <div class="box">
-            <div class="box-icon">📏</div>
-            <div>Odometer: 40974 (Actual)</div>
-        </div>
-        <div class="box">
-            <div class="box-icon">🔑</div>
-            <div>Keys Auction: Yes</div>
-        </div>
-        <div class="box">
-            <div class="box-icon">⚙️</div>
-            <div>Engine: Dual Motor Long Range</div>
-        </div>
-        <div class="box">
-            <div class="box-icon">⛽</div>
-            <div>Fuel: Electrik</div>
-        </div>
-        <div class="box">
-            <div class="box-icon">🔧</div>
-            <div>Damage: Front Side</div>
-        </div>
+      <div class="box">
+        <div class="box-icon">📄</div>
+        <div>Documents: TX-CLEAN Title</div>
+      </div>
+      <div class="box">
+        <div class="box-icon">📏</div>
+        <div>Odometer: 40,974 (Actual)</div>
+      </div>
+      <div class="box">
+        <div class="box-icon">🔑</div>
+        <div>Keys Auction: Yes</div>
+      </div>
+      <div class="box">
+        <div class="box-icon">⚙️</div>
+        <div>Engine: Long Range Dual Motor All-Wheel Drive</div>
+      </div>
+      <div class="box">
+        <div class="box-icon">⛽</div>
+        <div>Fuel: Electro</div>
+      </div>
+      <div class="box">
+        <div class="box-icon">🔧</div>
+        <div>Damage: Front Side</div>
+      </div>
     </div>
-</div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    let currentIndex = 0;
+    <script>
+      const carouselInner = document.getElementById("carousel-inner");
+      const prevButton = document.getElementById("prev");
+      const nextButton = document.getElementById("next");
 
-    function showSlide(index) {
-        const visibleImages = Array.from(document.querySelectorAll('#carousel-images img'))
-            .filter(img => img.style.display !== 'none');
-        const totalImages = visibleImages.length;
-        if (index >= totalImages) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = totalImages - 1;
-        } else {
-            currentIndex = index;
-        }
-        const offset = currentIndex * 100;
-        document.getElementById('carousel-images').style.transform = `translateX(-${offset}%)`;
-    }
+      const images = {
+        auction: [
+          "./tesla auction/1.jpg",
+          "./tesla auction/3.jpg",
+          "./tesla auction/2.jpg",
+          "./tesla auction/4.jpg",
+          "./tesla auction/5.jpg",
+          "./tesla auction/6.jpg",
+          "./tesla auction/7.jpg",
+          "./tesla auction/8.jpg",
+          "./tesla auction/9.jpg",
+          "./tesla auction/9.1.jpg",
+          "./tesla auction/10.jpg",
+          "./tesla auction/11.jpg",
+          "./tesla auction/12.jpg",
+          "./tesla auction/13.jpg",
+          "./tesla auction/14.jpg",
+          "./tesla auction/15.jpg",
+          "./tesla auction/16.jpg",
+          "./tesla auction/17.jpg",
+          "./tesla auction/18.jpg",
+        ],
+        picked_up: ["./Deliver/1.jpg", "./Deliver/2.jpg", "./Deliver/3.jpg"],
+        warehouse: [
+          "./tesla warehouse/1.jpg",
+          "./tesla warehouse/2.jpg",
+          "./tesla warehouse/3.jpg",
+          "./tesla warehouse/4.jpg",
+          "./tesla warehouse/5.jpg",
+          "./tesla warehouse/6.jpg",
+          "./tesla warehouse/7.jpg",
+          "./tesla warehouse/8.jpg",
+          "./tesla warehouse/9.jpg",
+          "./tesla warehouse/10.jpg",
+          "./tesla warehouse/11.jpg",
+          "./tesla warehouse/12.jpg",
+          "./tesla warehouse/13.jpg",
+          "./tesla warehouse/14.jpg",
+          "./tesla warehouse/15.jpg",
+          "./tesla warehouse/16.jpg",
+          "./tesla warehouse/17.jpg",
+          "./tesla warehouse/18.jpg",
+          "./tesla warehouse/19.jpg",
+          "./tesla warehouse/20.jpg",
+          "./tesla warehouse/21.jpg",
+          "./tesla warehouse/22.jpg",
+          "./tesla warehouse/23.jpg",
+          "./tesla warehouse/24.jpg",
+          "./tesla warehouse/25.jpg",
+        ],
+        port: ["./Port/No_image_available.svg (1).png"],
+      };
 
-    function nextSlide() {
-        showSlide(currentIndex + 1);
-    }
+      let currentIndex = 0;
+      let currentImages = images.auction;
 
-    function prevSlide() {
-        showSlide(currentIndex - 1);
-    }
-
-    function showCategory(category) {
-        const images = document.querySelectorAll('#carousel-images img');
-        images.forEach(img => {
-            if (img.getAttribute('data-category') === category) {
-                img.style.display = 'block';
-            } else {
-                img.style.display = 'none';
-            }
+      function updateCarousel() {
+        carouselInner.innerHTML = "";
+        currentImages.forEach((src) => {
+          const div = document.createElement("div");
+          div.className = "carousel-item";
+          const img = document.createElement("img");
+          img.src = src;
+          div.appendChild(img);
+          carouselInner.appendChild(div);
         });
+        updateSlide();
+      }
+
+      function updateSlide() {
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+      }
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateSlide();
+      });
+
+      prevButton.addEventListener("click", () => {
+        currentIndex =
+          (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateSlide();
+      });
+
+      function changeLocation(location) {
+        currentImages = images[location];
         currentIndex = 0;
-        showSlide(currentIndex);
-    }
+        updateCarousel();
+      }
 
-    // Always show the navigation buttons, regardless of images
-    const buttons = document.querySelectorAll('.carousel-button');
-    buttons.forEach(button => {
-        button.style.display = 'block'; // Ensure buttons are always visible
-    });
-
-    // Ensure the carousel buttons work
-    // document.querySelector('.carousel-button.right').addEventListener('click', nextSlide);
-    // document.querySelector('.carousel-button.left').addEventListener('click', prevSlide);
-    
-    // Attach functions to global scope if needed for inline event handling
-    window.showCategory = showCategory;
-    window.nextSlide = nextSlide;
-    window.prevSlide = prevSlide;
-});
-</script>
-
-</body>
+      // Initialize the carousel
+      updateCarousel();
+    </script>
+  </body>
 </html>
